@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruna Hastu Rasendriya | Portofolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+    <canvas id="particle-canvas"></canvas>  
+
+    <!-- Header navigasi -->
+    <header class="glass-effect fixed top-0 left-0 right-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold gradient-text">AHR</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-slate-300 hover:text-cyan-400 transition duration-300">Tentang Saya</a>
+                <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition duration-300">Proyek</a>
+                <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition duration-300">Pengalaman</a>
+                <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition duration-300">Kemampuan</a>
+                <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition duration-300">Kontak</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="text-white"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4">
+            <a href="#about" class="text-slate-300 hover:text-cyan-400 transition duration-300">Tentang Saya</a>
+            <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition duration-300">Proyek</a>
+            <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition duration-300">Pengalaman</a>
+            <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition duration-300">Kemampuan</a>
+            <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition duration-300">Kontak</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <section id="home" class="min-h-screen flex items-center pt-24 md:pt-0">
+            <div class="grid md:grid-cols-2 gap-16 items-center w-full">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight gradient-text">
+                       Aruna Hastu Rasendriya
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-cyan-400 font-semibold">
+                        <span id="typing-effect"></span><span class="typing-cursor"></span>
+                    </h2>
+                    <p class="text-slate-400 text-lg max-w-lg mt-2">
+                        Mahasiswa Software Engineering dengan semangat tinggi untuk belajar, beradaptasi, dan berinovasi dalam dunia teknologi.
+                    </p>
+                    <div class="flex items-center gap-4 mt-6">
+                        <a href="https://www.linkedin.com/in/aruna-hastu-rasendriya/" target="_blank" class="p-3 bg-slate-800 rounded-full hover:bg-cyan-500 transition-all duration-300 group">
+                            <i data-lucide="linkedin" class="text-slate-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="https://github.com/ArunaHastu?tab=repositories" target="_blank" class="p-3 bg-slate-800 rounded-full hover:bg-cyan-500 transition-all duration-300 group">
+                            <i data-lucide="github" class="text-slate-300 group-hover:text-white"></i>
+                        </a>
+                        <a href="#contact" class="ml-4 px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:bg-cyan-500 transition-all duration-300 transform hover:scale-105 pulse-effect">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                        <img src="images/profile.jpg" alt="Foto Aruna Hastu Rasendriya" class="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-slate-700">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About  -->
+        <section id="about" class="py-24 reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 gradient-text">Tentang Saya</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-3xl mx-auto">Profil singkat, perjalanan akademis, dan semangat saya dalam pengembangan perangkat lunak.</p>
+            <div class="glass-effect p-8 rounded-2xl max-w-4xl mx-auto text-center">
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    Saya Aruna Hastu Rasendriya, mahasiswa aktif semester 5 di Universitas Bina Nusantara, jurusan Computer Science - Software Engineering. Saya memiliki ketertarikan besar dalam bidang pengembangan perangkat lunak serta semangat tinggi untuk terus belajar di lingkungan teknologi yang dinamis. Saya pribadi yang mudah beradaptasi, terbiasa bekerja secara kolaboratif maupun mandiri, serta antusias mempelajari hal baru terkait teknologi, metode pengembangan sistem, dan inovasi digital.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24 reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 gradient-text">Proyek Saya</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-3xl mx-auto">Berikut adalah beberapa proyek akademik dan pribadi yang telah saya kerjakan.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- safekota -->
+                <div class="project-card glass-effect rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="relative h-56">
+                        <img src="images/safekota/c855f9780dfd4bd4ad674f5a629123db.jpg" class="project-image absolute w-full h-full object-cover transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 1">
+                        <img src="images/safekota/0d0096e14eed479baa1a7bdd4608a0db.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 2">
+                        <img src="images/safekota/49a754cd69d745f0becfa47bed042667.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 3">
+                        <img src="images/safekota/608df71cc4444bef8d411626ce418ce1.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 4">
+                        <img src="images/safekota/9463004cee684a388a9e45b60f9e94d4.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 5">
+                        <img src="images/safekota/005002c25444402fb6437e10011bdbb1.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="safekota" alt="Screenshot Proyek SafeKota 6">
+
+                        
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="prev-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                            <button class="next-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">SafeKota</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Aplikasi web untuk mendorong partisipasi masyarakat dalam menciptakan kota yang aman dengan pelaporan masalah lingkungan dan info fasilitas umum via peta interaktif.</p>
+                        <a href="https://arunahastu.github.io/safe-kota-project/" target="_blank" class="inline-block px-4 py-2 bg-cyan-600 text-white text-sm font-semibold rounded-lg hover:bg-cyan-500 transition-all duration-300 pulse-effect">Buka Website</a>
+                    </div>
+                </div>
+                <!-- zerowaste -->
+                <div class="project-card glass-effect rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="relative h-56">
+                        <img src="images/zerowaste/ca8ad7e2bcfc4215ac66aa10906692ad.jpg" class="project-image absolute w-full h-full object-cover transition-opacity duration-500" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 1">
+                        <img src="images/zerowaste/86a7d81fadd24dfca8078a2e17fc421b.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 2">
+                        <img src="images/zerowaste/ca8f5b2fe29943deb1d064aa86abfb77.jpg" class="" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 3">
+                        <img src="images/zerowaste/1dd16dd832614ea38b84063bebe7e1c7.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 4">
+                        <img src="images/zerowaste/d3dd78d4688f4ff49a950cce3d48adeb.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 5">
+                        <img src="images/zerowaste/e5492812a4d84db188ef366cfd70a382.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="zerowaste" alt="Screenshot Proyek ZeroWaste 6">
+
+                        
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="prev-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                            <button class="next-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">ZeroWaste</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Platform web inovatif yang menjembatani restoran dengan surplus makanan berkualitas kepada konsumen untuk mengurangi limbah makanan.</p>
+                        <a href="https://arunahastu.github.io/zero-waste-project/" target="_blank" class="inline-block px-4 py-2 bg-cyan-600 text-white text-sm font-semibold rounded-lg hover:bg-cyan-500 transition-all duration-300 pulse-effect">Buka Website</a>
+                    </div>
+                </div>
+                <!-- Skizo -->
+                <div class="project-card glass-effect rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                     <div class="relative h-56">
+                        <img src="images/skizo/WhatsApp Image 2025-09-29 at 22.01.43_26616d60.jpg" class="project-image absolute w-full h-full object-cover transition-opacity duration-500" data-project="skizofrenia" alt="Screenshot Proyek Skrining 1">
+                        <img src="images/skizo/WhatsApp Image 2025-09-29 at 22.01.43_8db595b4.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="skizofrenia" alt="Screenshot Proyek Skrining 2">
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="prev-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                            <button class="next-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Deteksi Dini Skizofrenia</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Aplikasi web berbasis Machine Learning sebagai alat skrining awal risiko skizofrenia, menganalisis faktor klinis menggunakan model Random Forest.</p>
+                        <a href="https://deteksi-dini-skizofrenia-project.streamlit.app/" target="_blank" class="inline-block px-4 py-2 bg-cyan-600 text-white text-sm font-semibold rounded-lg hover:bg-cyan-500 transition-all duration-300 pulse-effect">Buka Website</a>
+                    </div>
+                </div>
+                <!-- Sinefolis -->
+                <div class="project-card glass-effect rounded-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="relative h-56">
+                        <img src="images/sinefolis/92533ef4c68a42e3869b325cb52f6467.jpg" class="project-image absolute w-full h-full object-cover transition-opacity duration-500" data-project="sinefolis" alt="Screenshot Proyek Sinefolis 1">
+                        <img src="images/sinefolis/0eeea9a8a6814084b56d75833f9366d1.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="sinefolis" alt="Screenshot Proyek Sinefolis 2">
+                        <img src="images/sinefolis/05ecc2f58a864987bc8ad60316b77203.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="sinefolis" alt="Screenshot Proyek Sinefolis 3">
+                        <img src="images/sinefolis/b9726a1de4ed4e5d95b2021b206645dc.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="sinefolis" alt="Screenshot Proyek Sinefolis 4">
+                        <img src="images/sinefolis/c4c49c7013574aab9e15d3685f276be3.jpg" class="project-image absolute w-full h-full object-cover opacity-0 transition-opacity duration-500" data-project="sinefolis" alt="Screenshot Proyek Sinefolis 5">
+                        
+                        <div class="absolute bottom-2 right-2 flex space-x-2">
+                            <button class="prev-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                            <button class="next-btn bg-black/50 p-2 rounded-full text-white hover:bg-cyan-500 transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Sinefolis</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Platform pemesanan tiket bioskop yang intuitif. Memungkinkan pengguna untuk menemukan film terbaru, melihat jadwal, dan membeli tiket bioskop terdekat dengan mudah.</p>
+                        <a href="https://arunahastu.github.io/sinefolis-project/" target="_blank" class="inline-block px-4 py-2 bg-cyan-600 text-white text-sm font-semibold rounded-lg hover:bg-cyan-500 transition-all duration-300 pulse-effect">Buka Website</a>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center mt-12">
+                <a href="https://github.com/ArunaHastu?tab=repositories" target="_blank" class="text-cyan-400 font-semibold hover:underline">
+                    Lihat lebih banyak di GitHub &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience  -->
+        <section id="experience" class="py-24 reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 gradient-text">Pengalaman Saya</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-3xl mx-auto">Peran saya dalam organisasi dan kegiatan volunteer yang membentuk kemampuan kolaborasi dan tanggung jawab.</p>
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute left-4 top-0 h-full w-0.5 bg-slate-700"></div>
+                <div class="relative pl-12 mb-12">
+                    <div class="absolute left-0 top-1.5 w-8 h-8 bg-slate-800 border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                        <div class="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                    </div>
+                    <p class="text-sm text-cyan-400 mb-1">2024 - Sekarang</p>
+                    <h3 class="text-xl font-bold text-white">Divisi Pelatihan - UKM Binus Volleyball</h3>
+                    <p class="text-slate-400">Universitas Bina Nusantara</p>
+                    <ul class="list-disc list-inside mt-2 text-slate-300 text-sm space-y-1">
+                        <li>Memastikan kehadiran anggota tim melalui pencatatan absensi.</li>
+                        <li>Berpartisipasi aktif dalam latihan rutin untuk menjaga kekompakan tim.</li>
+                        <li>Menjaga booth dan memberikan informasi saat event kampus.</li>
+                        <li>Mengoordinasi peserta dan memastikan kelancaran acara.</li>
+                    </ul>
+                </div>
+                <div class="relative pl-12">
+                    <div class="absolute left-0 top-1.5 w-8 h-8 bg-slate-800 border-2 border-cyan-500 rounded-full flex items-center justify-center">
+                        <div class="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                    </div>
+                    <p class="text-sm text-cyan-400 mb-1">21 September 2024</p>
+                    <h3 class="text-xl font-bold text-white">Volunteer - Program "Packing 50,000 Meals"</h3>
+                    <p class="text-slate-400">Kolaborasi DISNEY, GOR Alam Sutera, Tangerang</p>
+                     <ul class="list-disc list-inside mt-2 text-slate-300 text-sm space-y-1">
+                        <li>Mengemas bahan makanan secara sistematis sesuai standar.</li>
+                        <li>Berkolaborasi dengan tim relawan dari berbagai kampus.</li>
+                        <li>Menjaga efisiensi dan ketepatan proses pengemasan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills  -->
+        <section id="skills" class="py-24 reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 gradient-text">Kemampuan Teknis</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-3xl mx-auto">Teknologi dan tools yang saya gunakan dalam mengembangkan proyek.</p>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-white mb-4">Bahasa Pemrograman</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="font-semibold text-lg text-white mb-4">Tools & Teknologi</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">Visual Studio Code</span>
+                        <span class="skill-badge">GitHub</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-white mb-4">Kompetensi Inti</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">Pengembangan Web</span>
+                        <span class="skill-badge">Desain User Interface</span>
+                        <span class="skill-badge">Analisis Data</span>
+                        <span class="skill-badge">Kolaborasi Tim</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact  -->
+        <section id="contact" class="py-24 text-center reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 gradient-text">Mari Terhubung</h2>
+            <p class="text-center text-slate-400 mb-8 max-w-xl mx-auto">Saya terbuka untuk diskusi, kolaborasi, atau kesempatan magang. Jangan ragu untuk menghubungi saya.</p>
+            <div class="glass-effect p-8 rounded-2xl max-w-sm mx-auto">
+                <div class="flex flex-col space-y-6">
+                    <div class="flex items-center space-x-4 justify-center">
+                        <i data-lucide="mail" class="text-cyan-400 w-6 h-6 flex-shrink-0"></i>
+                        <a href="mailto:arunahastu@gmail.com" class="text-lg text-white hover:text-cyan-400 transition-colors break-all">arunahastu@gmail.com</a>
+                    </div>
+                    <div class="flex items-center space-x-4 justify-center">
+                        <i data-lucide="phone" class="text-cyan-400 w-6 h-6 flex-shrink-0"></i>
+                        <span class="text-lg text-white">081294206697</span>
+                    </div>
+                    <div class="flex items-center space-x-4 justify-center">
+                        <i data-lucide="map-pin" class="text-cyan-400 w-6 h-6 flex-shrink-0"></i>
+                        <span class="text-lg text-white">Bekasi, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 border-t border-slate-800">
+        <p class="text-slate-500">&copy; 2025 Aruna Hastu Rasendriya. Dibuat dengan semangat dan secangkir kopi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
