@@ -1,14 +1,11 @@
-// Initialize Lucide Icons
 lucide.createIcons();
 
-// Mobile Menu Toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
-// Typing Effect
 const typingElement = document.getElementById('typing-effect');
 const textToType = "Software Engineer & Innovator.";
 let charIndex = 0;
@@ -19,7 +16,6 @@ function type() {
         charIndex++;
         setTimeout(type, 100);
     } else {
-        // Pause and then restart the animation
         setTimeout(() => {
             charIndex = 0;
             typingElement.textContent = "";
@@ -27,14 +23,12 @@ function type() {
         }, 3000);
     }
 }
-// Start typing effect once the DOM is loaded
 document.addEventListener('DOMContentLoaded', type);
 
-// Particle background effect
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.height = document.documentElement.scrollHeight; // Set height to full scroll height
+canvas.height = document.documentElement.scrollHeight; 
 
 let particlesArray;
 
@@ -94,14 +88,12 @@ function updateCanvasDimensions() {
 }
 
 window.addEventListener('resize', updateCanvasDimensions);
-// Also update when content might change height
 window.addEventListener('load', updateCanvasDimensions);
 
 
 initParticles();
 animateParticles();
 
-// Reveal on scroll animation
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -115,7 +107,6 @@ revealElements.forEach(el => {
     revealObserver.observe(el);
 });
 
-// Project image carousel logic
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach(card => {
     const images = card.querySelectorAll('.project-image');
@@ -130,7 +121,7 @@ projectCards.forEach(card => {
     }
 
     prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent card click event
+        e.stopPropagation(); 
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         showImage(currentIndex);
     });
@@ -141,17 +132,14 @@ projectCards.forEach(card => {
         showImage(currentIndex);
     });
 
-    // Auto-slide functionality
     let autoSlideInterval = setInterval(() => {
         nextBtn.click();
     }, 5000);
 
-    // Pause on hover
     card.addEventListener('mouseenter', () => {
         clearInterval(autoSlideInterval);
     });
 
-    // Resume on leave
     card.addEventListener('mouseleave', () => {
         autoSlideInterval = setInterval(() => {
             nextBtn.click();
@@ -159,7 +147,6 @@ projectCards.forEach(card => {
     });
 });
 
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -170,7 +157,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
        
-        // Close mobile menu on click
         if (!mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.add('hidden');
         }
